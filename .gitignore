@@ -1,0 +1,12 @@
+# python
+__pycache__/
+*.pyc
+
+# virtualenv
+.venv/
+
+# poetry
+poetry.lock
+
+# sqlite
+*.sqlite3
