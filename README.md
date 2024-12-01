@@ -10,11 +10,11 @@ This project is a simple API REST for managing movies, built with Django and Dja
     ```
 3. **Run Migrations**: Apply the database migrations with:
     ```bash
-    poetry run python manage.py migrate
+    poetry run poe migrate
     ```
 4. **Start the Server**: Launch the development server using:
     ```bash
-    poetry run python manage.py runserver
+    poetry run poe runserver
     ```
 
 ## Endpoints
@@ -34,7 +34,7 @@ This project includes Swagger for API documentation. Swagger provides a user-fri
 To access the Swagger UI, follow these steps:
 1. **Start the Server**: Ensure the development server is running:
     ```bash
-    poetry run python manage.py runserver
+    poetry run poe runserver
     ```
 2. **Open Swagger UI**: Navigate to `http://localhost:8000/api/v1/swagger/` in your web browser to view the API documentation.
 
