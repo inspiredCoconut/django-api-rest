@@ -5,6 +5,14 @@ from .serializers import RegisterSerializer
 
 
 class RegisterView(generics.CreateAPIView):
+    """
+        View for user registration
+
+        Methods:
+            - post: Creates a new user
+        
+    """
+
     queryset = User.objects.all()
     permission_classes = (AllowAny,)
     serializer_class = RegisterSerializer

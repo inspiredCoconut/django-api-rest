@@ -5,6 +5,23 @@ from django.contrib.auth.password_validation import validate_password
 
 
 class RegisterSerializer(serializers.ModelSerializer):
+    """
+        Serializer for user registration
+        
+        Fields:
+            - username: CharField
+            - password: CharField
+            - password2: CharField
+            - email: EmailField
+            - first_name: CharField
+            - last_name: CharField
+            
+        Methods:
+            - validate: Validates the password fields
+            - create: Creates a new user
+            
+    """
+    
     email = serializers.EmailField(
         required=True,
         validators=[UniqueValidator(queryset=User.objects.all())]

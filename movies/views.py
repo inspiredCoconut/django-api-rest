@@ -9,6 +9,15 @@ from .filters import MovieFilter
 
 
 class ListCreateMovieAPIView(ListCreateAPIView):
+    """
+    View for listing and creating movies
+    
+    Methods:
+        - get: Lists all movies
+        - post: Creates a new movie
+        
+    """
+    
     serializer_class = MovieSerializer
     queryset = Movie.objects.all()
     permission_classes = [IsAuthenticated]
@@ -22,6 +31,16 @@ class ListCreateMovieAPIView(ListCreateAPIView):
 
 
 class RetrieveUpdateDestroyMovieAPIView(RetrieveUpdateDestroyAPIView):
+    """
+    View for retrieving, updating and deleting movies
+    
+    Methods:
+        - get: Retrieves a movie
+        - put: Updates a movie
+        - delete: Deletes a movie
+        
+    """
+    
     serializer_class = MovieSerializer
     queryset = Movie.objects.all()
     permission_classes = [IsAuthenticated, IsOwnerOrReadOnly]
